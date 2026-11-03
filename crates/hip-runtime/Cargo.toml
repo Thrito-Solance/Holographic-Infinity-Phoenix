@@ -1,0 +1,17 @@
+[package]
+name = "hip-runtime"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "Deterministic bounded actor simulation for HIP"
+
+[features]
+default = []
+enterprise-core = []
+
+[dependencies]
+hip-algebra = { path = "../hip-algebra" }
+tokio = { workspace = true }
+
+[lib]
+path = "src/lib.rs"

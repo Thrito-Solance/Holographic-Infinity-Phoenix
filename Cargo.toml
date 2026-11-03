@@ -1,0 +1,35 @@
+[package]
+name = "hip-core"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "Deterministic prototype for the Holographic Infinity Phoenix runtime"
+
+[features]
+default = []
+enterprise-core = [
+    "hip-algebra/enterprise-core",
+    "hip-mera/enterprise-core",
+    "hip-runtime/enterprise-core",
+]
+
+[workspace]
+members = [
+    ".",
+    "crates/hip-algebra",
+    "crates/hip-topology",
+    "crates/hip-mera",
+    "crates/hip-runtime",
+    "crates/hip-cli",
+]
+resolver = "2"
+
+[dependencies]
+hip-algebra = { path = "crates/hip-algebra" }
+hip-mera = { path = "crates/hip-mera" }
+hip-runtime = { path = "crates/hip-runtime" }
+hip-topology = { path = "crates/hip-topology" }
+tokio = { workspace = true }
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync"] }

@@ -1,0 +1,13 @@
+[package]
+name = "hip-algebra"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "Checked modular quaternion arithmetic for HIP"
+
+[features]
+default = []
+enterprise-core = []
+
+[lib]
+path = "src/lib.rs"

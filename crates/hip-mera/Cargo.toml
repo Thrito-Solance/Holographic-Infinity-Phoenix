@@ -1,0 +1,16 @@
+[package]
+name = "hip-mera"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "Checked modular contraction operators for HIP"
+
+[features]
+default = []
+enterprise-core = []
+
+[dependencies]
+hip-algebra = { path = "../hip-algebra" }
+
+[lib]
+path = "src/lib.rs"
